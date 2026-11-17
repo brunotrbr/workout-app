@@ -13,13 +13,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Meu Treino Semanal" },
+      { title: "Military Workout" },
       {
         name: "description",
         content:
           "Cronograma semanal de treinos com registro de cargas. Funciona offline no celular.",
       },
-      { property: "og:title", content: "Meu Treino Semanal" },
+      { property: "og:title", content: "Military Workout" },
       {
         property: "og:description",
         content:
@@ -47,7 +47,7 @@ function Index() {
           {WEEKDAYS[today.getDay()]}, {today.toLocaleDateString("pt-BR")}
         </p>
         <h1 className="mt-1 text-2xl font-bold text-foreground">
-          Meu Treino Semanal
+          Military Workout
         </h1>
         {todayWorkout && (
           <p className="mt-1 text-sm text-muted-foreground">
@@ -85,7 +85,7 @@ function Index() {
         })}
       </nav>
 
-      {workout ? (
+      {workout && workout.exercises.length > 0 ? (
         <WorkoutView workout={workout} selectedDay={selectedDay} />
       ) : (
         <div className="rounded-xl border border-border bg-card p-6 text-center">
@@ -93,7 +93,8 @@ function Index() {
             Dia de descanso 😴
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Nenhum treino programado para {(WEEKDAYS[selectedDay] ?? "").toLowerCase()}.
+            {workout?.warmup ??
+              `Nenhum treino programado para ${(WEEKDAYS[selectedDay] ?? "").toLowerCase()}.`}
           </p>
         </div>
       )}
@@ -133,6 +134,12 @@ function WorkoutView({
           <ExerciseCard key={ex.id} exercise={ex} selectedDay={selectedDay} />
         ))}
       </div>
+
+      {workout.cooldown && (
+        <p className="mt-4 rounded-lg border border-border bg-muted px-3 py-2 text-xs text-muted-foreground">
+          {workout.cooldown}
+        </p>
+      )}
     </section>
   );
 }

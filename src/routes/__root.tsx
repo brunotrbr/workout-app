@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Meu Treino Semanal" },
+      { title: "Military Workout" },
       {
         name: "description",
         content:
           "Cronograma semanal de treinos com registro de cargas. Funciona offline no celular.",
       },
       { name: "theme-color", content: "#1a1d21" },
-      { property: "og:title", content: "Meu Treino Semanal" },
+      { property: "og:title", content: "Military Workout" },
       {
         property: "og:description",
         content:
@@ -99,6 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/icon-192.png" },

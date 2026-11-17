@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#242b33"/>
+      <stop offset="60%" stop-color="#16191d"/>
+      <stop offset="100%" stop-color="#0d0f12"/>
+    </radialGradient>
+
+    <!-- Metallic Gold Gradients -->
+    <linearGradient id="goldBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="25%" stop-color="#E5B942"/>
+      <stop offset="50%" stop-color="#FCE082"/>
+      <stop offset="75%" stop-color="#C79222"/>
+      <stop offset="100%" stop-color="#8F620D"/>
+    </linearGradient>
+
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5C0"/>
+      <stop offset="40%" stop-color="#F2C84B"/>
+      <stop offset="100%" stop-color="#A57313"/>
+    </linearGradient>
+
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DFAC33"/>
+      <stop offset="60%" stop-color="#A47214"/>
+      <stop offset="100%" stop-color="#5B3C04"/>
+    </linearGradient>
+
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f242b"/>
+      <stop offset="50%" stop-color="#171a1f"/>
+      <stop offset="100%" stop-color="#0e1013"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)"/>
+
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#2c343d" stroke-width="2"/>
+  <circle cx="256" cy="256" r="226" fill="none" stroke="url(#goldBevel)" stroke-width="3" opacity="0.85"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="#1c2127" stroke-width="1.5"/>
+
+  <!-- Tactical Shield / Crest -->
+  <path d="M256,80 L380,126 C380,268 328,374 256,420 C184,374 132,268 132,126 Z" 
+        fill="url(#shieldBg)" stroke="url(#goldBevel)" stroke-width="7" stroke-linejoin="round"/>
+  
+  <path d="M256,96 L366,137 C366,258 320,354 256,398 C192,354 146,258 146,137 Z" 
+        fill="none" stroke="url(#goldDark)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Special Forces / SEAL Golden Trident Emblem -->
+  <!-- Central Spearhead -->
+  <path d="M256,86 L238,154 L256,206 Z" fill="url(#goldLight)"/>
+  <path d="M256,86 L274,154 L256,206 Z" fill="url(#goldDark)"/>
+  <line x1="256" y1="86" x2="256" y2="206" stroke="#FFF7C2" stroke-width="1.5"/>
+
+  <!-- Left Prong -->
+  <path d="M200,104 L212,128 L206,146 C202,174 214,196 238,206 L234,222 C200,210 184,180 188,142 L182,130 Z" 
+        fill="url(#goldLight)" stroke="url(#goldDark)" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="200,104 212,128 196,124" fill="#FFF3A8"/>
+
+  <!-- Right Prong -->
+  <path d="M312,104 L300,128 L306,146 C310,174 298,196 274,206 L278,222 C312,210 328,180 324,142 L330,130 Z" 
+        fill="url(#goldDark)" stroke="#744D06" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="312,104 300,128 316,124" fill="url(#goldBevel)"/>
+
+  <!-- Trident Crossbar / Collar -->
+  <path d="M202,216 L310,216 L314,232 L198,232 Z" fill="url(#goldBevel)" stroke="url(#goldDark)" stroke-width="1.5"/>
+  <circle cx="218" cy="224" r="3" fill="#FFF3A8"/>
+  <circle cx="256" cy="224" r="3.5" fill="#FFF3A8"/>
+  <circle cx="294" cy="224" r="3" fill="#FFF3A8"/>
+
+  <!-- Trident Lower Shaft -->
+  <path d="M250,232 L262,232 L260,364 L252,364 Z" fill="url(#goldLight)"/>
+  <path d="M256,232 L262,232 L260,364 L256,364 Z" fill="url(#goldDark)"/>
+  <polygon points="256,386 247,364 265,364" fill="url(#goldBevel)"/>
+
+  <!-- Anchor Flukes -->
+  <path d="M210,330 C220,358 240,370 256,370 C272,370 292,358 302,330 L314,334 C300,372 274,386 256,386 C238,386 212,372 198,334 Z" 
+        fill="url(#goldBevel)"/>
+
+  <!-- 3 Stars -->
+  <path d="M256,52 L260.5,63.5 L273,64.2 L263.5,72.2 L266.5,84.2 L256,77.8 L245.5,84.2 L248.5,72.2 L239,64.2 L251.5,63.5 Z" fill="url(#goldBevel)"/>
+  <path transform="translate(-52, 10) rotate(-12, 256, 68)" 
+        d="M256,56 L259.8,65.6 L270,66.2 L262.2,72.8 L264.8,82.8 L256,77.5 L247.2,82.8 L249.8,72.8 L242,66.2 L252.2,65.6 Z" fill="url(#goldBevel)"/>
+  <path transform="translate(52, 10) rotate(12, 256, 68)" 
+        d="M256,56 L259.8,65.6 L270,66.2 L262.2,72.8 L264.8,82.8 L256,77.5 L247.2,82.8 L249.8,72.8 L242,66.2 L252.2,65.6 Z" fill="url(#goldBevel)"/>
+</svg>
