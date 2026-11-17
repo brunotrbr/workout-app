@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Cronograma semanal de treinos com registro de cargas. Funciona offline no celular.",
       },
-      { name: "theme-color", content: "#1a1d21" },
+      { name: "theme-color", content: "#12171e" },
       { property: "og:title", content: "Military Workout" },
       {
         property: "og:description",
